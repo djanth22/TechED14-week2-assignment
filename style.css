@@ -26,8 +26,10 @@ button {
   left: 5vw;
 }
 
-#Thumbnail-container {
-  height: 72px;
+#Thumbnail-container,
+.thumbnail-hide-button {
+  align-items: center;
+  height: 78px;
   width: auto;
   display: flex;
   position: absolute;
@@ -42,6 +44,8 @@ button {
   border-radius: 4px;
   backdrop-filter: blur(5px);
   transform: translateX(-50%);
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .thumbnail-hide-button {
@@ -52,9 +56,19 @@ button {
   overflow: hidden;
 }
 
+.thumb-is-hidden {
+  bottom: 4vh;
+  width: auto;
+  padding: 0px 7px 1px 7px;
+  height: auto;
+  overflow: hidden;
+}
+
 .thumb-image {
   width: 100px;
   height: 70px;
+  margin: 2px;
+  cursor: pointer;
 }
 
 .displayed-image,

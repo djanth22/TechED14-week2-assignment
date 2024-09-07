@@ -7,6 +7,7 @@ let thumbnailContainer = document.getElementById(`Thumbnail-container`);
 // buttons
 const prev = document.getElementById(`previous`);
 const next = document.getElementById(`next`);
+const hideButton = document.querySelector(`.thumbnail-hide-button`);
 
 // for later
 let currentImageIndex = 0;
@@ -73,7 +74,7 @@ function updateCurrentImage() {
 }
 
 // buttons
-// I want a function here that updates the image index as an event handler for the buttons
+// next and previous
 function updateIndex(index) {
   currentImageIndex += index;
   if (currentImageIndex >= images.length) currentImageIndex = 0;
@@ -86,4 +87,19 @@ next.addEventListener("click", function () {
 });
 prev.addEventListener("click", function () {
   updateIndex(-1);
+});
+
+// hide
+function visibility() {
+  if (thumbnailContainer.style.visibility === "hidden") {
+    thumbnailContainer.style.visibility = "visible";
+    hideButton.classList.remove(`thumb-is-hidden`);
+  } else {
+    thumbnailContainer.style.visibility = "hidden";
+    hideButton.classList.add(`thumb-is-hidden`);
+  }
+}
+
+hideButton.addEventListener("click", function () {
+  visibility();
 });
