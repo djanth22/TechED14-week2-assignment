@@ -27,7 +27,7 @@ button {
 }
 
 #Thumbnail-container {
-  height: 60px;
+  height: 72px;
   width: auto;
   display: flex;
   position: absolute;
@@ -54,8 +54,14 @@ button {
 
 .thumb-image {
   width: 100px;
+  height: 70px;
 }
 
-.displayedImage {
+.displayed-image,
+#display-image {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  object-position: center;
   object-fit: cover;
 }
