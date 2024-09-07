@@ -49,10 +49,13 @@ button {
   width: auto;
   padding: 0px 7px 1px 7px;
   height: auto;
-  transition: bottom 0.4s;
   overflow: hidden;
 }
 
 .thumb-image {
   width: 100px;
+}
+
+.displayedImage {
+  object-fit: cover;
 }
