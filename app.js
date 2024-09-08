@@ -15,33 +15,33 @@ let currentImageIndex = 0;
 //images
 const images = [
   {
-    src: "images/placeholder-image1.jpg",
+    src: "images/Untitled177.png",
     alt: "ph1",
-    thumnail: "images/placeholder-image1.jpg",
+    thumnail: "images/Untitled177.png",
     num: 0,
   },
   {
-    src: "images/placeholder-image2.jpg",
+    src: "images/Untitled155.jpg",
     alt: "ph2",
-    thumnail: "images/placeholder-image2.jpg",
+    thumnail: "images/Untitled155.jpg",
     num: 1,
   },
   {
-    src: "images/placeholder-image3.jpg",
+    src: "images/Untitled156_20220414155415.png",
     alt: "ph3",
-    thumnail: "images/placeholder-image3.jpg",
+    thumnail: "images/Untitled156_20220414155415.png",
     num: 2,
   },
   {
-    src: "images/placeholder-image4.jpg",
+    src: "images/Untitled172.png",
     alt: "ph4",
-    thumnail: "images/placeholder-image4.jpg",
+    thumnail: "images/Untitled172.png",
     num: 3,
   },
   {
-    src: "images/placeholder-image5.jpg",
+    src: "images/Untitled176.png",
     alt: "ph5",
-    thumnail: "images/placeholder-image5.jpg",
+    thumnail: "images/Untitled176.png",
     num: 4,
   },
 ];
@@ -66,10 +66,8 @@ function createThumbnails() {
   }
 }
 
-// // testing function
 createThumbnails();
 updateCurrentImage(images[currentImageIndex]);
-// it worked
 
 // main image
 function updateCurrentImage() {
@@ -112,7 +110,7 @@ hideButton.addEventListener("click", function () {
   visibility();
 });
 
-// thumbnail click
+// need to add something for the thumbnails to work
 
 // arrow keys
 function handleArrowKeyPress(event) {
