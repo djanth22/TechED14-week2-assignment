@@ -16,31 +16,31 @@ let currentImageIndex = 0;
 const images = [
   {
     src: "images/Untitled177.png",
-    alt: "ph1",
+    alt: "digital art man smoking",
     thumnail: "images/Untitled177.png",
     num: 0,
   },
   {
     src: "images/Untitled155.jpg",
-    alt: "ph2",
+    alt: "digital art wolf in the snow",
     thumnail: "images/Untitled155.jpg",
     num: 1,
   },
   {
     src: "images/Untitled156_20220414155415.png",
-    alt: "ph3",
+    alt: "digital art chained in tartarus",
     thumnail: "images/Untitled156_20220414155415.png",
     num: 2,
   },
   {
     src: "images/Untitled172.png",
-    alt: "ph4",
+    alt: "digital art scary tall figure in the mist",
     thumnail: "images/Untitled172.png",
     num: 3,
   },
   {
     src: "images/Untitled176.png",
-    alt: "ph5",
+    alt: "digital art robot holds the fires of creation",
     thumnail: "images/Untitled176.png",
     num: 4,
   },
