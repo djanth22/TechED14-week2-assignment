@@ -2,15 +2,20 @@ body {
   color: white;
   background-color: #000000;
   box-sizing: border-box;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 button {
-  border: 1px solid #ffffffad;
+  border: 1px, solid, #ffffffad;
   border-radius: 100%;
   background-color: #0000004c;
   color: #ffffffad;
-  padding: 6px 10px;
-  z-index: 100;
+  padding: 10px;
+  z-index: 1;
   cursor: pointer;
 }
 
@@ -46,6 +51,7 @@ button {
   transform: translateX(-50%);
   overflow-x: scroll;
   overflow-y: hidden;
+  border: 3px, red, solid;
 }
 
 .thumbnail-hide-button {
@@ -54,6 +60,7 @@ button {
   padding: 0px 7px 1px 7px;
   height: auto;
   overflow: hidden;
+  border: none;
 }
 
 .thumb-is-hidden {
@@ -75,7 +82,76 @@ button {
 #display-image {
   overflow: hidden;
   height: 100vh;
-  width: 100vw;
+  width: 96vw;
   object-position: center;
   object-fit: cover;
+  padding: 0;
+  margin: 0;
+  border: 3px, rgb(255, 0, 0), solid;
+}
+
+@media (max-width: 400px) {
+  html {
+    width: 130vw;
+    height: 100vw;
+  }
+  body {
+    width: 130vw;
+  }
+  .displayed-image,
+  #display-image {
+    width: 102vw;
+    height: 160vw;
+    object-fit: contain;
+  }
+  #next {
+    position: absolute;
+    top: 50vh;
+    right: -26vw;
+    left: 100vw;
+  }
+  #Thumbnail-container,
+  .thumbnail-hide-button {
+    align-items: center;
+    height: 40px;
+    width: 110vw;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: #00000075;
+    bottom: -8vh;
+    left: 65%;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    transform: translateX(-50%);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border: 3px, red, solid;
+  }
+  .thumbnail-hide-button {
+    bottom: 0vh;
+    width: auto;
+    padding: 0px 7px 1px 7px;
+    height: auto;
+    overflow: hidden;
+    border: none;
+  }
+
+  .thumb-is-hidden {
+    bottom: -6vh;
+    width: auto;
+    padding: 0px 7px 1px 7px;
+    height: auto;
+    overflow: hidden;
+  }
+  .thumb-image {
+    width: 60px;
+    height: 70px;
+    margin: 2px;
+    cursor: pointer;
+  }
 }

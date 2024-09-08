@@ -18,26 +18,31 @@ const images = [
     src: "images/placeholder-image1.jpg",
     alt: "ph1",
     thumnail: "images/placeholder-image1.jpg",
+    num: 0,
   },
   {
     src: "images/placeholder-image2.jpg",
     alt: "ph2",
     thumnail: "images/placeholder-image2.jpg",
+    num: 1,
   },
   {
     src: "images/placeholder-image3.jpg",
     alt: "ph3",
     thumnail: "images/placeholder-image3.jpg",
+    num: 2,
   },
   {
     src: "images/placeholder-image4.jpg",
     alt: "ph4",
     thumnail: "images/placeholder-image4.jpg",
+    num: 3,
   },
   {
     src: "images/placeholder-image5.jpg",
     alt: "ph5",
     thumnail: "images/placeholder-image5.jpg",
+    num: 4,
   },
 ];
 
@@ -49,15 +54,18 @@ function gallery() {
 }
 
 // thumbnails
+let index = 0;
 function createThumbnails() {
   for (thumbnails of images) {
     let thumbnail = document.createElement("img");
     thumbnail.setAttribute(`src`, thumbnails.src);
     thumbnail.setAttribute(`alt`, thumbnails.alt);
     thumbnail.classList.add(`thumb-image`);
+    thumbnail.setAttribute(`id`, index++);
     thumbnailContainer.appendChild(thumbnail);
   }
 }
+
 // // testing function
 createThumbnails();
 updateCurrentImage(images[currentImageIndex]);
@@ -103,3 +111,16 @@ function visibility() {
 hideButton.addEventListener("click", function () {
   visibility();
 });
+
+// thumbnail click
+
+// arrow keys
+function handleArrowKeyPress(event) {
+  if (event.key === "ArrowRight") {
+    updateIndex(1);
+  } else if (event.key === "ArrowLeft") {
+    updateIndex(-1);
+  }
+}
+
+window.addEventListener("keydown", handleArrowKeyPress);
